@@ -9,8 +9,6 @@ python3 manage.py runserver
 
 API Schema in Schema.JSON
 
-Functions In this API:
---------------------------------------
 Public endpoints
 ----------------------
 Register, Get Token For Auth 
