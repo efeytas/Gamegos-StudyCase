@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "8aff6d98-0ec4-4205-b306-c12449b3e184",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19747279"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/players/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"players",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "user",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Player List",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyOTc4MTY1LCJqdGkiOiJkYWE0Mjc2OGU0YWI0MTBlYTI5NTE2MjE0YzRjM2VhZiIsInVzZXJfaWQiOjJ9.U5g1VmCUPeBpqGjf3gfHs7meKpI6Hxtic_rAkO6Pnqc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/players/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"players",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Level Up User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyOTgwMTEyLCJqdGkiOiJlZmVmOGM1YTRiN2Q0NzAyOGZjYzFkNmE4ZWIyZTE1MiIsInVzZXJfaWQiOjJ9.qhbMmS366nexPKENL_lQaKMzIcJXR26w_Mvm0Go8C-U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/players/levelup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"players",
+						"levelup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Event Create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyOTgwMTEyLCJqdGkiOiJlZmVmOGM1YTRiN2Q0NzAyOGZjYzFkNmE4ZWIyZTE1MiIsInVzZXJfaWQiOjJ9.qhbMmS366nexPKENL_lQaKMzIcJXR26w_Mvm0Go8C-U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/event/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"event",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Join Evet",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyOTgzOTYyLCJqdGkiOiJjNmQwYWNlODhhOTI0ZmVmYTI5YjNkNTk4N2QxMGQyZCIsInVzZXJfaWQiOjJ9.tD1o4Ozz_RxaYTND2UEuFvpCKzfneJqbjr2jXdOBvzQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"event_id\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/event/join/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"event",
+						"join",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
