@@ -2,7 +2,15 @@ from django.db import models
 from CaseStudy.Player.models import Player
 from enum import Enum
 
+# constants
+BRONZE_MIN_LEVEL = 1
+BRONZE_MAX_LEVEL = 20
+SILVER_MIN_LEVEL = 21
+SILVER_MAX_LEVEL = 49
+GOLD_MIN_LEVEL = 50
+MAX_PLAYER_PER_GROUP = 20
 
+# enums
 class Category(models.TextChoices):
     GOLD = 'GOLD', 'Gold'
     SILVER = 'SILVER', 'Silver'
@@ -12,6 +20,7 @@ class Event(models.Model):
     def __str__(self):
         return str(self.id)
 
+# group model
 class Group(models.Model):
     event = models.ForeignKey(
         Event, 
@@ -27,7 +36,7 @@ class Group(models.Model):
         choices=Category.choices,
     )
 
-
+# membership model
 class Membership(models.Model):
     group = models.ForeignKey(
         Group, 
@@ -51,4 +60,3 @@ class Membership(models.Model):
 
 
 
-# Create your models here.

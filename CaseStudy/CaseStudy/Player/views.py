@@ -11,7 +11,10 @@ from django.shortcuts import get_object_or_404
 def get_user_profile(user):
     return get_object_or_404(Player, user=user)
 
+
+# create a mixin class for User
 class UserMixin:
+    # override create method -> register
     @action(detail=False, 
             methods=['POST'],
             url_path='register',
@@ -34,7 +37,8 @@ class UserMixin:
             return Response(serializer.data)
         else:
             return Response(serializer.errors)
-        
+    
+    # override update method -> levelup
     @action(detail=False,
             methods=['POST'],
             url_path='levelup',
@@ -52,6 +56,8 @@ class PlayerViewSet(viewsets.ModelViewSet,
                    UserMixin):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+    # override get_permissions method
     def get_permissions(self):
         if self.action == 'register':
             return []
@@ -59,7 +65,7 @@ class PlayerViewSet(viewsets.ModelViewSet,
             return [IsAuthenticated()]
         
 
-
+    # override create, update, list method
     def create(self, request, *args, **kwargs):
         return self.register(request, *args, **kwargs)
     

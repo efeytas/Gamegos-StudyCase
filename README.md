@@ -18,3 +18,8 @@ Register, Get Token For Auth
 Private Endpoints
 
 Player List, Level Up 1 User, Event Create, Join Event
+
+Admin Account:
+
+username:admin
+password:admin
