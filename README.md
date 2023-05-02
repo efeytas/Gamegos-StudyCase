@@ -9,14 +9,11 @@ python3 manage.py runserver
 
 API Schema in Schema.JSON
 
-Functions In this API
-
-Public endpoints
-
+Functions In this API:
+Public endpoints:
 Register, Get Token For Auth 
-
-Private Endpoints
-
+--------------------------------------
+Private Endpoints:
 Player List, Level Up 1 User, Event Create, Join Event
 
 Admin Account:
